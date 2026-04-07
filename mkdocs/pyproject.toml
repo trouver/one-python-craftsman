@@ -1,0 +1,8 @@
+[project]
+name = "one-python-craftsman"
+version = "0.1.0"
+description = "来自一位 Pythonista 的编程经验分享，内容涵盖编码技巧、最佳实践与思维模式等方面。"
+requires-python = ">=3.10"
+dependencies = [
+    "mkdocs-material>=9.7.6",
+]

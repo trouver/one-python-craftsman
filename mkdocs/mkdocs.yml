@@ -1,0 +1,98 @@
+site_name: Python 工匠：案例、技巧与工程实践
+site_author: piglei
+site_description: 来自一位 Pythonista 的编程经验分享，内容涵盖编码技巧、最佳实践与思维模式等方面。
+
+# Repository
+repo_name: piglei/one-python-craftsman
+repo_url: https://github.com/piglei/one-python-craftsman
+
+# Copyright
+# copyright: x
+
+# Configuration
+theme:
+  name: material
+  palette:
+  - media: "(prefers-color-scheme)"
+    toggle:
+      icon: material/lightbulb-auto
+      name: 白天模式
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    primary: deep purple
+    accent: amber
+    toggle:
+      icon: material/lightbulb
+      name: 黑夜模式
+  - media: '(prefers-color-scheme: dark)'
+    scheme: slate
+    primary: black
+    accent: amber
+    toggle:
+      icon: material/lightbulb-outline
+      name: 跟随系统
+  features:
+    - content.action.edit  # 在页面右上角添加一个 "Edit this page" 按钮，链接到页面源码，可以编辑文档。
+    # - content.action.view  # 添加一个 "View source" 按钮，可以查看当前页面的源文件。
+    - content.code.annotate  # 为代码块中的行号添加注释功能，通常用于显示行号。
+    - content.code.copy  # 在代码块右上角添加一个 "Copy" 按钮，方便直接复制代码。
+    - content.code.select  # 启用代码块的点击选择功能，点击代码块即可选中全部内容。
+    - content.footnote.tooltips  # 将脚注（footnotes）显示为悬浮提示框，而不是在页面底部列出。
+    - content.tabs.link  # 启用标签页链接功能，允许在文档中创建可切换的内容标签。
+    - content.tooltips  # 全局启用悬浮提示框（tooltips）功能。
+    # - header.autohide  # 向下滚动页面时，自动隐藏页面顶部的导航栏，以提供更多的阅读空间。
+    - navigation.expand  # 启用导航菜单的展开/折叠功能，允许展开子菜单。
+    # - navigation.footer  # 在页面底部显示一个导航栏，包含 "Previous" 和 "Next" 链接。
+    # - navigation.indexes  # 在导航菜单中显示文档的索引（index）页面。
+    - navigation.instant  # 启用即时导航功能，点击导航链接后，内容会立即加载，无需刷新整个页面。
+    # - navigation.instant.prefetch  # 在悬停或接近导航链接时，预加载目标页面的内容，提升导航速度。
+    - navigation.instant.preview  # 在导航链接上显示一个小的预览窗口，显示目标页面的内容。
+    # - navigation.instant.progress  # 在页面顶部显示一个进度条，显示在当前页面中的滚动进度。
+    # - navigation.path  # 在导航栏中显示当前页面的完整路径。
+    # - navigation.prune  # 自动修剪导航菜单，只显示与当前页面相关的部分。
+    # - navigation.sections  # 在导航菜单中显示文档的章节结构。
+    # - navigation.tabs  # 在导航栏中显示标签页，方便在不同部分之间切换。
+    - navigation.tabs.sticky  # 使导航标签页在页面滚动时保持固定。
+    - navigation.top  # 向上滚动时，在页面上方显示 "Back to top" 按钮。
+    - navigation.tracking  # 启用导航跟踪功能，记录导航行为。
+    - search.highlight  # 在搜索结果中高亮显示匹配的关键词。
+    # - search.share  # 在搜索结果页面添加分享功能。
+    - search.suggest  # 在搜索框中显示搜索建议。
+    - toc.follow  # 启用目录跟随功能，当滚动页面时，目录会自动高亮显示当前阅读的章节。
+    # - toc.integrate  # 将目录集成到页面内容中，而不是显示在侧边栏。
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - md_in_html
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.superfences
+
+# Page tree
+nav:
+  - 序言: index.md
+  - 1. 善用变量改善代码质量: zh_CN/1-using-variables-well.md
+  - 2. 编写条件分支代码的技巧: zh_CN/2-if-else-block-secrets.md
+  - 3. 使用数字与字符串的技巧: zh_CN/3-tips-on-numbers-and-strings.md
+  - 4. 容器的门道: zh_CN/4-mastering-container-types.md
+  - 5. 让函数返回结果的技巧: zh_CN/5-function-returning-tips.md
+  - 6. 异常处理的三个好习惯: zh_CN/6-three-rituals-of-exceptions-handling.md
+  - 7. 编写地道循环的两个建议: zh_CN/7-two-tips-on-loop-writing.md
+  - 8. 使用装饰器的技巧: zh_CN/8-tips-on-decorators.md
+  - 9. 一个关于模块的小故事: zh_CN/9-a-story-on-cyclic-imports.md
+  - 10. 做一个精通规则的玩家: zh_CN/10-a-good-player-know-the-rules.md
+  - 11. 高效操作文件的三个建议: zh_CN/11-three-tips-on-writing-file-related-codes.md
+  - 12. 写好面向对象代码的原则（上）: zh_CN/12-write-solid-python-codes-part-1.md
+  - 13. 写好面向对象代码的原则（中）: zh_CN/13-write-solid-python-codes-part-2.md
+  - 14. 写好面向对象代码的原则（下）: zh_CN/14-write-solid-python-codes-part-3.md
+  - 15. 在边界处思考: zh_CN/15-thinking-in-edge-cases.md
+  - 16. 语句、表达式和海象操作符: zh_CN/16-stmt-expr-and-walrus-operator.md
